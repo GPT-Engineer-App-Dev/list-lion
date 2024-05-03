@@ -1,6 +1,7 @@
-import { Box, Flex, Heading, Input, Button, List, ListItem, IconButton, useToast } from '@chakra-ui/react';
+import { Box, Flex, Heading, Input, Button, List, ListItem, IconButton, useToast, Text } from '@chakra-ui/react';
 import { FaPlus, FaTrash, FaEdit } from 'react-icons/fa';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const Index = () => {
   const [tasks, setTasks] = useState([]);
@@ -64,6 +65,12 @@ const Index = () => {
           </ListItem>
         ))}
       </List>
+      <Box as="footer" mt={10} py={5} px={8} bg="gray.100" textAlign="center">
+        <Text fontSize="sm">&copy; {new Date().getFullYear()} Todo App. All rights reserved.</Text>
+        <Link to="/privacy-policy" style={{ textDecoration: 'none' }}>
+          <Text fontSize="sm" color="blue.500" mt={2}>Privacy Policy</Text>
+        </Link>
+      </Box>
     </Box>
   );
 };
