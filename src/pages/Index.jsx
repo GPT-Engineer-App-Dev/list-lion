@@ -31,9 +31,7 @@ const Index = () => {
     setTasks(tasks.map(task => task.id === id ? { ...task, text: newText } : task));
   };
 
-  console.log('Rendering Navbar...');
-  console.log('Rendering input field...');
-  console.log('Rendering task list...');
+  
 
   return (
     <Box p={8} style={{ visibility: 'visible' }}>

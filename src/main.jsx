@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
 import { ChakraProvider, extendTheme } from "@chakra-ui/react";
-import { ErrorBoundary } from 'react-error-boundary';
+
 
 const colors = {
   brand: {
@@ -25,9 +25,7 @@ const errorFallback = ({ error, resetErrorBoundary }) => (
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <ChakraProvider theme={theme}>
-      <ErrorBoundary FallbackComponent={errorFallback}>
-        <App />
-      </ErrorBoundary>
+      <App />
     </ChakraProvider>
   </React.StrictMode>
 );
