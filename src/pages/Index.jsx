@@ -1,4 +1,5 @@
 import { Box, Flex, Heading, Input, Button, List, ListItem, IconButton, useToast, Text } from '@chakra-ui/react';
+import Navbar from '../components/Navbar';
 import { FaPlus, FaTrash, FaEdit } from 'react-icons/fa';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
@@ -32,6 +33,7 @@ const Index = () => {
 
   return (
     <Box p={8}>
+      <Navbar />
       <Flex as="nav" justify="space-between" align="center" mb={8}>
         <Heading size="lg">Todo App</Heading>
       </Flex>
