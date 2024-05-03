@@ -31,8 +31,12 @@ const Index = () => {
     setTasks(tasks.map(task => task.id === id ? { ...task, text: newText } : task));
   };
 
+  console.log('Rendering Navbar...');
+  console.log('Rendering input field...');
+  console.log('Rendering task list...');
+
   return (
-    <Box p={8}>
+    <Box p={8} style={{ visibility: 'visible' }}>
       <Navbar />
       <Flex as="nav" justify="space-between" align="center" mb={8}>
         <Heading size="lg">Todo App</Heading>
